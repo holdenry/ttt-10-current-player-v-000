@@ -1,9 +1,9 @@
 require 'pry'
 
 def turn_count(board)
-  counter = -6
+  counter = 0
   board.each do |index|
-  if index  == "X" || "O"
+  if index  == "X" || index == "O"
     counter += 1
   end  
 end
@@ -16,8 +16,7 @@ end
 # end
  
  def current_player(board)
-   binding.pry 
-      turn_count(board) % 2 != 0? "X" : "O"
+     turn_count(board) % 2 != 0? "X" : "O"
 end  
 
 
